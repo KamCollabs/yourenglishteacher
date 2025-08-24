@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your English Teacher – Formations d'anglais certifiantes (CPF, Linguaskill, PeopleCert, VTest)</title>
+    <meta name="description" content="Formations d'anglais sur mesure pour professionnels et particuliers en France : individuel, groupe, présentiel ou à distance. Certifications CPF (LEVELTEL, VTest et PeopleCert. QUALIOPI)." />
+    <meta property="og:title" content="Your English Teacher – Formations d'anglais certifiantes" />
+    <meta property="og:description" content="Cours d'anglais personnalisés et flexibles pour entreprises, indépendants et particuliers. CPF, Linguaskill, PeopleCert. QUALIOPI." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter","ui-sans-serif","system-ui","-apple-system","Segoe UI","Roboto","Helvetica Neue","Arial","Noto Sans","sans-serif"]
+            },
+            colors: {
+              brand: { 50:"#eff6ff",100:"#dbeafe",200:"#bfdbfe",600:"#2563eb",700:"#1d4ed8" }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root { --site-bg:#162036; }
+      html,body { background:var(--site-bg); }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 bg-brand-600 text-white px-4 py-2 rounded-lg shadow-lg">Aller au contenu</a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-700/50 py-2 md:py-3">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-20 items-center justify-between">
+          <!-- Logo -->
+          <a href="./index.html#accueil" class="flex items-center gap-2">
+            <img src="./assets/logo.png" alt="Your English Teacher" class="h-16 w-16 md:h-20 md:w-20 rounded-2xl transition-transform hover:scale-105" />
+            <span class="text-xl md:text-2xl font-semibold leading-tight tracking-tight">Your English Teacher</span>
+          </a>
+
+          <!-- Desktop nav -->
+          <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-5 md:whitespace-nowrap text-[15px]">
+            <a href="./index.html#accueil" class="inline-flex h-10 items-center hover:text-brand-600">Accueil</a>
+            <a href="./formations-cpf.html" class="inline-flex h-10 items-center hover:text-brand-600 whitespace-nowrap">Formations CPF</a>
+            <a href="./formations-entreprises.html" class="inline-flex h-10 items-center hover:text-brand-600">Entreprises</a>
+            <a href="./certifications.html" class="inline-flex h-10 items-center hover:text-brand-600">Partenaires</a>
+            <a href="./temoignages.html" class="inline-flex h-10 items-center hover:text-brand-600">Témoignages</a>
+            <a href="./index.html#contact" class="inline-flex h-10 items-center hover:text-brand-600">Contact</a>
+            <a href="./legal.html#cgv" class="inline-flex h-10 items-center hover:text-brand-600">CGV</a>
+            <a
+              href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis&nbsp;/&nbsp;RDV
+            </a>
+          </nav>
+
+          <!-- Mobile menu button -->
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-300/70 dark:border-slate-700 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600" aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/60 dark:border-slate-700/50">
+        <div class="px-4 py-3 space-y-2">
+          <a href="./index.html#accueil" class="block py-2">Accueil</a>
+          <a href="./formations-cpf.html" class="block py-2 whitespace-nowrap">Formations CPF</a>
+          <a href="./formations-entreprises.html" class="block py-2">Entreprises</a>
+          <a href="./certifications.html" class="block py-2">Partenaires</a>
+          <a href="./temoignages.html" class="block py-2">Témoignages</a>
+          <a href="./index.html#contact" class="block py-2">Contact</a>
+          <a href="./legal.html#cgv" class="block py-2">CGV</a>
+          <a href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis&nbsp;/&nbsp;RDV
+            </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Accueil / Hero -->
+      <section id="accueil" class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50 to-transparent dark:from-brand-900/20" aria-hidden="true"></div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+          <!-- Give the image column more width on large screens so height grows without cropping -->
+          <div class="grid items-center gap-10 lg:grid-cols-[1fr_1.3fr]">
+            <div>
+              <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                Apprenez l'anglais efficacement et à votre rythme. Un accompagnement sur mesure qui répond à vos besoins.
+              </h1>
+              <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                Formations sur mesure pour entreprises, indépendants et particuliers. Individuel, groupe, à distance ou en
+                présentiel. Certifications CPF ou autres certifications hors cadre du CPF.
+              </p>
+              <div class="mt-6 flex flex-wrap items-center gap-3">
+                <a href="./formations-cpf.html" class="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold shadow hover:bg-brand-700 focus-visible:ring-2 focus-visible:ring-brand-600">Voir les formations</a>
+                <a href="#contact" class="inline-flex items-center rounded-xl border border-slate-300/80 dark:border-slate-700 px-5 py-3 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800">Obtenir un devis</a>
+              </div>
+              <ul class="mt-8 grid grid-cols-2 gap-4 text-sm text-slate-600 dark:text-slate-300">
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span>Parcours 100% personnalisés</li>
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span>Horaires flexibles (En semaine, weekends et/ou jours fériés)</li>
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span>CPF & certifications reconnues</li>
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span>Certifié Qualiopi</li>
+              </ul>
+            </div>
+
+            <!-- Right: Image (no frame) -->
+            <div class="relative" aria-label="Salle de classe">
+              <img
+                src="./assets/images/classroom.png"
+                alt="Salle de classe"
+                class="w-full h-auto rounded-2xl shadow-xl"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logos clients -->
+      <section class="mt-14">
+        <h2 class="text-3xl font-bold tracking-tight text-center text-white">Ils nous ont fait confiance</h2>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-start">
+            <a href="https://www.sony.fr" target="_blank" rel="noopener" class="group flex flex-col items-center">
+              <div class="bg-white rounded-2xl shadow-sm w-44 md:w-48 aspect-[4/3] flex items-center justify-center transition-transform duration-200 ease-out group-hover:scale-[1.06] group-hover:-translate-y-0.5 group-hover:shadow-lg" aria-label="Sony">
+                <img src="./assets/logos/Sony.png" alt="Logo Sony" class="block object-contain max-h-20 md:max-h-24 max-w-[85%]" />
+              </div>
+              <p class="mt-3 text-sm font-semibold text-slate-400 text-center">Sony</p>
+            </a>
+
+            <a href="https://www.chronopost.fr/fr/particulier#/step-home" target="_blank" rel="noopener" class="group flex flex-col items-center">
+              <div class="bg-white rounded-2xl shadow-sm w-44 md:w-48 aspect-[4/3] flex items-center justify-center transition-transform duration-200 ease-out group-hover:scale-[1.06] group-hover:-translate-y-0.5 group-hover:shadow-lg" aria-label="Chronopost">
+                <img src="./assets/logos/Chronopost.svg" alt="Logo Chronopost" class="block object-contain max-h-20 md:max-h-24 max-w-[85%]" />
+              </div>
+              <p class="mt-3 text-sm font-semibold text-slate-400 text-center">Chronopost</p>
+            </a>
+
+            <a href="https://www.gea.com/fr/" target="_blank" rel="noopener" class="group flex flex-col items-center">
+              <div class="bg-white rounded-2xl shadow-sm w-44 md:w-48 aspect-[4/3] flex items-center justify-center transition-transform duration-200 ease-out group-hover:scale-[1.06] group-hover:-translate-y-0.5 group-hover:shadow-lg" aria-label="GEA">
+                <img src="./assets/logos/GEA.svg" alt="Logo GEA" class="block object-contain max-h-20 md:max-h-24 max-w-[85%]" />
+              </div>
+              <p class="mt-3 text-sm font-semibold text-slate-400 text-center">GEA</p>
+            </a>
+
+            <a href="https://www.lesfermesdegally.com" target="_blank" rel="noopener" class="group flex flex-col items-center">
+              <div class="bg-white rounded-2xl shadow-sm w-44 md:w-48 aspect-[4/3] flex items-center justify-center transition-transform duration-200 ease-out group-hover:scale-[1.06] group-hover:-translate-y-0.5 group-hover:shadow-lg" aria-label="Les Fermes de Gally">
+                <img src="./assets/logos/Gally.png" alt="Logo Les Fermes de Gally" class="block object-contain max-h-20 md:max-h-24 max-w-[85%]" />
+              </div>
+              <p class="mt-3 text-sm font-semibold text-slate-400 text-center">Les Fermes de Gally</p>
+            </a>
+
+            <a href="https://finandir.com" target="_blank" rel="noopener" class="group flex flex-col items-center">
+              <div class="bg-white rounded-2xl shadow-sm w-44 md:w-48 aspect-[4/3] flex items-center justify-center transition-transform durée-200 ease-out group-hover:scale-[1.06] group-hover:-translate-y-0.5 group-hover:shadow-lg" aria-label="La Financière des Dirigeants">
+                <img src="./assets/logos/FINANDIR.png" alt="Logo La Financière des Dirigeants" class="block object-contain max-h-20 md:max-h-24 max-w-[85%]" />
+              </div>
+              <p class="mt-3 text-sm font-semibold text-slate-400 text-center">La Financière des Dirigeants</p>
+            </a>
+
+            <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/projet-bati-408546091" target="_blank" rel="noopener" class="group flex flex-col items-center">
+              <div class="bg-white rounded-2xl shadow-sm w-44 md:w-48 aspect-[4/3] flex items-center justify-center transition-transform durée-200 ease-out group-hover:scale-[1.06] group-hover:-translate-y-0.5 group-hover:shadow-lg" aria-label="Projet'Bati">
+                <img src="./assets/logos/projetbati.png" alt="Logo Projet'Bati" class="block object-contain max-h-20 md:max-h-24 max-w-[85%]" />
+              </div>
+              <p class="mt-3 text-sm font-semibold text-slate-400 text-center">Projet'Bati</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formations -->
+      <section id="formations" class="py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold tracking-tight">Formations d'anglais sur mesure</h2>
+            <p class="mt-3 text-slate-600 dark:text-slate-300">Du niveau débutant à avancé, en ligne ou en présentiel, en individuel ou en groupe.</p>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm bg-white dark:bg-slate-800 text-center">
+              <img src="./assets/images/coaching.jpg" alt="Coaching individuel" class="mx-auto w-40 h-40 object-cover rounded-xl shadow-md mb-4">
+              <h3 class="font-semibold text-lg">Coaching individuel</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Programme personnalisé selon vos objectifs (entretien, email pro, réunions, TOEIC/IELTS).</p>
+              <ul class="mt-4 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300 text-left">
+                <li>Bilan de niveau et plan d'apprentissage</li><li>Sessions 45–60 min</li><li>Ressources & devoirs ciblés</li>
+              </ul>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm bg-white dark:bg-slate-800 text-center">
+              <img src="./assets/images/groupe.jpg" alt="Cours en groupe" class="mx-auto w-40 h-40 object-cover rounded-xl shadow-md mb-4">
+              <h3 class="font-semibold text-lg">Cours en groupe</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Groupes homogènes par niveau, axés sur l'oral et les situations professionnelles.</p>
+              <ul class="mt-4 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300 text-left">
+                <li>Jusqu'à 6 apprenants</li><li>Parcours thématiques (vente, tech, logistique, etc.)</li><li>Supports collaboratifs</li>
+              </ul>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm bg-white dark:bg-slate-800 text-center">
+              <img src="./assets/images/hybride.jpeg" alt="En ligne & présentiel" class="mx-auto w-40 h-40 object-cover rounded-xl shadow-md mb-4">
+              <h3 class="font-semibold text-lg">En ligne & présentiel</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Flexibilité totale : visio (WhatsApp/Zoom/Meet) ou cours sur site dans vos locaux.</p>
+              <ul class="mt-4 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300 text-left">
+                <li>Créneaux tôt le matin, midi, soir et/ou les weekends</li><li>Suivi pédagogique & feedback</li><li>Accès à une bibliothèque de ressources</li>
+              </ul>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm bg-white dark:bg-slate-800 text-center">
+              <img src="./assets/images/certification.jpg" alt="Préparation aux certifications" class="mx-auto w-40 h-40 object-cover rounded-xl shadow-md mb-4">
+              <h3 class="font-semibold text-lg">Préparation aux certifications</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">LEVELTEL, VTest, PeopleCert, LINGUASKILL, TOEIC/IELTS : entraînement ciblé et examens blancs.</p>
+              <ul class="mt-4 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300 text-left">
+                <li>Méthodologie & stratégie d'épreuve</li><li>Simulation des conditions réelles</li><li>Rapport de progression</li>
+              </ul>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm bg-white dark:bg-slate-800 text-center">
+              <img src="./assets/images/entreprise.jpg" alt="Parcours entreprise" class="mx-auto w-40 h-40 object-cover rounded-xl shadow-md mb-4">
+              <h3 class="font-semibold text-lg">Parcours entreprise</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Plans de formation pour équipes, reporting RH et objectifs métiers.</p>
+              <ul class="mt-4 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300 text-left">
+                <li>Audit des besoins</li><li>KPIs & tableau de bord</li><li>Formules intensives ou continues</li>
+              </ul>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm bg-white dark:bg-slate-800 text-center">
+              <img src="./assets/images/progression.jpg" alt="Niveaux A1 à C2" class="mx-auto w-40 h-40 object-cover rounded-xl shadow-md mb-4">
+              <h3 class="font-semibold text-lg">Niveaux A1 → C2</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Progression claire selon le CECRL, avec objectifs mesurables.</p>
+              <ul class="mt-4 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300 text-left">
+                <li>Évaluation initiale</li><li>Capsules de grammaire & vocabulaire</li><li>Ateliers conversation</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Organisme -->
+      <section id="organisme" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+          <div class="flex justify-center">
+            <img src="./assets/images/instructor.jpg" alt="Votre formatrice d'anglais" class="w-94 h-94 object-cover rounded-2xl shadow-lg">
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight">Organisme de formation</h2>
+            <p class="mt-4 text-slate-600 dark:text-slate-300">
+              Your English Teacher est un organisme de formation certifié en France, spécialisé dans l’enseignement de l’anglais
+              pour les professionnels et particuliers. Nos formations sont éligibles au financement via le CPF et respectent
+              les standards QUALIOPI. La formatrice, Kamilia Favre, diplômée BAC+5 en littérature anglaise, spécialisée en
+              anglais technique avec plus de 17 ans d'expérience dans l'enseignement. Elle a collaboré avec une centaine
+              d'entreprises en tant que prestataire de services et sous-traitante. Plus de 500 stagiaires ont été formés
+              et travaillent dans tous les secteurs en France.
+            </p>
+            <ul class="mt-6 space-y-2 text-slate-700 dark:text-slate-300 list-disc pl-5">
+              <li>Certification Qualiopi pour la qualité des formations</li>
+              <li>Formations éligibles au CPF</li>
+              <li>Accompagnement personnalisé et suivi pédagogique</li>
+              <li>Expérience avec de grandes entreprises (Sony, Chronopost…)</li>
+            </ul>
+            <p class="mt-6 text-slate-600 dark:text-slate-300">En tant qu’organisme de formation reconnu, nous vous garantissons un parcours clair, certifiant et adapté à vos besoins.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Engagements & qualité -->
+      <section id="engagements" class="py-10">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <a href="./legal.html#certificats" class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 flex items-center gap-6 hover:shadow-lg transition-shadow">
+              <div class="flex items-center justify-center bg-white rounded-2xl shadow-sm p-4 w-80 h-80 transition group-hover:shadow-md group-hover:scale-[1.02]">
+                <img src="./assets/badges/qualiopi-certifie.png" alt="Certification Qualiopi – Actions de formation" class="max-h-64 max-w-64 object-contain bg-white rounded-xl" loading="lazy">
+              </div>
+              <div class="flex-1">
+                <p class="font-semibold">Organisme certifié Qualiopi</p>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">La certification qualité a été délivrée au titre de la catégorie d'action suivante : <strong>ACTION DE FORMATION</strong></p>
+                <span class="mt-2 inline-block text-sm text-brand-700 dark:text-brand-600 underline decoration-dotted">Voir nos certificats →</span>
+              </div>
+            </a>
+
+            <a href="./assets/charte-deontologie.pdf" target="_blank" rel="noopener" class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 flex items-center gap-6 hover:shadow-lg transition-shadow">
+              <div class="flex items-center justify-center bg-white rounded-2xl shadow-sm p-4 w-80 h-80 transition group-hover:shadow-md group-hover:scale-[1.02]">
+                <img src="./assets/badges/charte.png" alt="Charte de déontologie" class="max-h-64 max-w-64 object-contain bg-white rounded-xl" loading="lazy">
+              </div>
+              <div class="flex-1">
+                <p class="font-semibold">Charte de déontologie</p>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Transparence, bienveillance et respect du cadre légal.</p>
+                <span class="mt-2 inline-block text-sm text-brand-700 dark:text-brand-600 underline decoration-dotted">Consulter la charte (PDF) →</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Offres CPF -->
+      <section id="cpf" class="py-20 bg-slate-50 dark:bg-slate-800/40">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-10 items-start">
+            <div>
+              <h2 class="text-3xl font-bold tracking-tight">Financez vos cours via le CPF</h2>
+              <p class="mt-3 text-slate-600 dark:text-slate-300">Utilisez votre Compte Personnel de Formation pour couvrir tout ou partie de votre parcours, dans le respect des exigences légales et de la certification Qualiopi.</p>
+              <ol class="mt-6 list-decimal pl-6 space-y-2 text-slate-700 dark:text-slate-300">
+                <li>Vérifiez votre solde CPF sur MonCompteFormation.</li>
+                <li>Choisissez une formation éligible.</li>
+                <li>Constituez votre dossier.</li>
+                <li>Validation et démarrage de la formation.</li>
+              </ol>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href="#contact" class="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold shadow hover:bg-brand-700 focus-visible:ring-2 focus-visible:ring-brand-600">Être accompagné(e)</a>
+                <a href="#certifications" class="inline-flex items-center rounded-xl border border-slate-300/80 dark:border-slate-700 px-5 py-3 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800">Voir les certifications</a>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-dashed border-slate-300 dark:border-slate-600 p-6">
+              <h3 class="font-semibold text-lg">Éligibilité & conformité</h3>
+              <ul class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                <li>✅ Organisme certifié QUALIOPI (actions de formation)</li>
+                <li>✅ Traçabilité des apprentissages & évaluations</li>
+                <li>✅ Attestations et reporting conformes</li>
+              </ul>
+              <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">Nous vous guidons pas à pas pour mobiliser vos droits, constituer votre dossier et choisir la certification adaptée.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chiffres clés -->
+      <section id="chiffres" class="py-16 bg-white dark:bg-slate-800/40">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold tracking-tight text-center">Chiffres clés</h2>
+          <p class="mt-3 text-center text-slate-600 dark:text-slate-300">Des résultats concrets au service de vos objectifs.</p>
+          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 text-center bg-white dark:bg-slate-800">
+              <p class="text-3xl font-extrabold"><span class="stat" data-to="100" data-suffix="%">0%</span></p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Taux de satisfaction des stagiaires</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 text-center bg-white dark:bg-slate-800">
+              <p class="text-3xl font-extrabold"><span class="stat" data-to="100" data-suffix="%">0%</span></p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Taux de retour des enquêtes</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 text-center bg-white dark:bg-slate-800">
+              <p class="text-3xl font-extrabold"><span class="stat" data-to="500" data-prefix="+">0</span></p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Nombre de stagiaires</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 text-center bg-white dark:bg-slate-800">
+              <p class="text-3xl font-extrabold"><span class="stat" data-to="0" data-suffix="%">0%</span></p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Taux d'interruption</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 text-center bg-white dark:bg-slate-800">
+              <p class="text-3xl font-extrabold"><span class="stat" data-to="0" data-suffix="%">0%</span></p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Taux et cause des abandons</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 text-center bg-white dark:bg-slate-800">
+              <p class="text-3xl font-extrabold"><span class="stat" data-to="45" data-suffix="%">0%</span></p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Taux d'insertion dans l'emploi</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Handicap -->
+      <section id="handicap" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold tracking-tight text-center">Handicap</h2>
+          <div class="mt-10 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow">
+            <p class="mt-4 text-slate-600 dark:text-slate-300">
+              Toutes les formations sont accessibles aux personnes handicapées et à mobilité réduite. Lors de l'inscription,
+              nous étudions avec le candidat les actions à mettre en place pour favoriser son apprentissage, avec l'aide
+              d'un réseau de partenaires spécialisés si nécessaire.
+            </p>
+            <p class="mt-6 text-lg font-medium text-slate-700 dark:text-slate-200 italic">
+              « Formation accessible aux personnes handicapées »
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h2 class="text-3xl font-bold tracking-tight">Contact</h2>
+              <p class="mt-3 text-slate-600 dark:text-slate-300">Parlez-nous de vos objectifs. Nous vous répondrons sous 24h ouvrées.</p>
+              <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+                <li>📞 <a href="tel:+33689968604" class="underline decoration-dotted">06 89 96 86 04</a></li>
+                <li>✉️ <a href="mailto:kamilia.df@hotmail.com" class="underline decoration-dotted">kamilia.df@hotmail.com</a></li>
+                <li class="flex items-center gap-2">
+                  <img src="./assets/linkedin.svg" alt="LinkedIn" class="w-5 h-5">
+                  <a href="https://www.linkedin.com/in/kamilia-daaibes-favre-98939631/" class="underline decoration-dotted" target="_blank" rel="noopener">LinkedIn</a>
+                </li>
+              </ul>
+              <div class="mt-8 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6">
+                <p class="text-sm text-slate-700 dark:text-slate-300">
+                  <strong>Résumé de l'offre :</strong> cours 100% personnalisés (pas d’e-learning), visio ou sur site, particuliers et professionnels.
+                  Préparation aux examens et accompagnement CPF et hors cadre CPF.
+                </p>
+              </div>
+            </div>
+
+            <!-- Contact form -->
+            <form action="https://formspree.io/f/xvgbpqpl" method="POST" class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 shadow-sm">
+              <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+              <input type="hidden" name="_subject" value="Nouveau message - Your English Teacher" />
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="nom" class="block text-sm font-medium">Nom</label>
+                  <input id="nom" name="nom" type="text" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-transparent px-3 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"/>
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium">Email</label>
+                  <input id="email" name="email" type="email" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-transparent px-3 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"/>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="tel" class="block text-sm font-medium">Téléphone</label>
+                  <input id="tel" name="tel" type="tel" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-transparent px-3 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"/>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="objet" class="block text-sm font-medium">Objet</label>
+                  <input id="objet" name="objet" type="text" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-transparent px-3 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"/>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="message" class="block text-sm font-medium">Message</label>
+                  <textarea id="message" name="message" rows="5" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-transparent px-3 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"></textarea>
+                </div>
+                <div class="sm:col-span-2 flex items-center justify-between">
+                  <label class="text-sm"><input type="checkbox" required class="mr-2" /> J'accepte la <a href="./legal.html#politique" class="underline decoration-dotted">politique de confidentialité</a></label>
+                  <button type="submit" class="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold shadow hover:bg-brand-700 focus-visible:ring-2 focus-visible:ring-brand-600">Envoyer</button>
+                </div>
+                <div id="form-status" class="sm:col-span-2"></div>
+              </div>
+            </form>
+
+            <script>
+              (function () {
+                const form = document.querySelector('form[action^="https://formspree.io/f/"]');
+                if (!form) return;
+                const statusBox = form.querySelector("#form-status");
+                const submitBtn = form.querySelector('button[type="submit"]');
+                form.addEventListener("submit", async (e) => {
+                  e.preventDefault();
+                  statusBox.textContent = "";
+                  submitBtn.disabled = true;
+                  try {
+                    const response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+                    if (response.ok) { form.reset(); statusBox.innerHTML = '<p class="mt-4 text-sm text-green-600 dark:text-green-400">Merci ! Votre message a été envoyé.</p>'; }
+                    else { statusBox.innerHTML = '<p class="mt-4 text-sm text-red-600 dark:text-red-400">Oups, une erreur est survenue.</p>'; }
+                  } catch { statusBox.innerHTML = '<p class="mt-4 text-sm text-red-600 dark:text-red-400">Erreur réseau, réessayez plus tard.</p>'; }
+                  finally { submitBtn.disabled = false; }
+                });
+              })();
+            </script>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-700">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+        <div>
+          <p class="font-semibold">Your English Teacher</p>
+          <p class="mt-2 text-slate-600 dark:text-slate-400">Formations d'anglais pour particuliers et professionnels.</p>
+        </div>
+        <div>
+          <p class="font-semibold">Liens</p>
+          <ul class="mt-2 space-y-2">
+            <li><a href="./index.html#accueil" class="hover:underline">Accueil</a></li>
+            <li><a href="./formations-cpf.html" class="hover:underline">Formations CPF</a></li>
+            <li><a href="./formations-entreprises.html" class="hover:underline">Entreprises</a></li>
+            <li><a href="./certifications.html" class="hover:underline">Certifications</a></li>
+            <li><a href="./legal.html#cgv" class="hover:underline">CGV</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold">Légal</p>
+          <ul class="mt-2 space-y-2">
+            <li><a href="./legal.html#mentions" class="hover:underline">Mentions légales</a></li>
+            <li><a href="./legal.html#politique" class="hover:underline">Politique de confidentialité</a></li>
+            <li><a href="./legal.html#certificats" class="hover:underline">Certificats QUALIOPI</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold">Nous suivre</p>
+          <ul class="mt-2 space-y-2">
+            <li class="flex items-center gap-2">
+              <img src="./assets/linkedin.svg" alt="LinkedIn" class="w-4 h-4">
+              <a href="https://www.linkedin.com/in/kamilia-daaibes-favre-98939631/" target="_blank" rel="noopener" class="hover:underline">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500 space-y-2">
+        <p class="font-semibold">Kamilia Favre</p>
+        <p>Service de formation professionnelle en langue anglaise</p>
+        <p>Déclaration d'activité n° <span class="font-medium">52 72 02354 72</span> – Numéro SIRET : <span class="font-medium">51769619100033</span></p>
+        <p class="pt-2">© <span id="year"></span> Your English Teacher. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobileMenu');
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const isOpen = menu.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+      // Year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Stats counter animation
+      (function () {
+        const counters = document.querySelectorAll('.stat');
+        if (!('IntersectionObserver' in window) || counters.length === 0) {
+          counters.forEach(el => {
+            const to = +el.dataset.to || 0;
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            el.textContent = prefix + to + suffix;
+          });
+          return;
+        }
+        const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+        const animate = (el, to, { prefix = '', suffix = '', duration = 1200 }) => {
+          const start = performance.now();
+          const from = 0;
+          const frame = (now) => {
+            const progress = Math.min(1, (now - start) / duration);
+            const eased = easeOutCubic(progress);
+            const value = Math.round(from + (to - from) * eased);
+            el.textContent = prefix + value + suffix;
+            if (progress < 1) requestAnimationFrame(frame);
+            else el.textContent = prefix + to + suffix;
+          };
+          requestAnimationFrame(frame);
+        };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const to = +el.dataset.to || 0;
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            animate(el, to, { prefix, suffix });
+            observer.unobserve(el);
+          });
+        }, { threshold: 0.5 });
+        counters.forEach(el => observer.observe(el));
+      })();
+    </script>
+
+    <!-- SEO structured data -->
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"EducationalOrganization",
+        "name":"Your English Teacher",
+        "description":"Formations d'anglais sur mesure (individuel, groupe, en ligne, présentiel). Certifications CPF, Linguaskill, PeopleCert. Qualiopi.",
+        "areaServed":"FR",
+        "email":"contact@your-english-teacher.fr",
+        "url":"https://example.com",
+        "sameAs":["https://www.linkedin.com/in/kamilia-daaibes-favre-98939631/"],
+        "knowsAbout":["English training","Linguaskill","PeopleCert","CPF"],
+        "offers":[
+          {"@type":"Offer","name":"Coaching individuel"},
+          {"@type":"Offer","name":"Cours en groupe"},
+          {"@type":"Offer","name":"Préparation certifications"}
+        ]
+      }
+    </script>
+  </body>
+</html>

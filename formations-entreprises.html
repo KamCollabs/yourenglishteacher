@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formations Entreprises – Your English Teacher</title>
+  <meta name="description" content="Formations d’anglais à distance pour entreprises : 100% personnalisées, WhatsApp/visio, horaires étendus (semaine, weekends, jours fériés), sans e-learning. Reporting clair et certifications reconnues." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { 50:'#eff6ff', 200:'#bfdbfe', 600:'#2563eb', 700:'#1d4ed8'} },
+          fontFamily: { sans: ["Inter","ui-sans-serif","system-ui","-apple-system","Segoe UI","Roboto","Helvetica Neue","Arial","Noto Sans","sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <style>:root { color-scheme: light dark; }</style>
+</head>
+<body class="min-h-screen bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-700/50 py-2 md:py-3">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <a href="index.html#accueil" class="flex items-center gap-2">
+          <img src="assets/logo.png" alt="Your English Teacher" class="h-16 w-16 md:h-20 md:w-20 rounded-2xl transition-transform hover:scale-105">
+          <span class="text-xl md:text-2xl font-semibold tracking-tight">Your English Teacher</span>
+        </a>
+
+        <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-5 md:whitespace-nowrap text-[15px]">
+          <a href="index.html#accueil" class="inline-flex h-10 items-center hover:text-brand-600">Accueil</a>
+          <a href="formations-cpf.html" class="inline-flex h-10 items-center text-brand-700 dark:text-brand-600 font-semibold whitespace-nowrap">Formations CPF</a>
+          <a href="formations-entreprises.html" aria-current="page" class="inline-flex h-10 items-center hover:text-brand-600">Entreprises</a>
+          <a href="certifications.html" class="inline-flex h-10 items-center hover:text-brand-600">Partenaires</a>
+          <a href="temoignages.html" class="inline-flex h-10 items-center hover:text-brand-600">Témoignages</a>
+          <a href="legal.html#cgv" class="inline-flex h-10 items-center hover:text-brand-600">CGV</a>
+          <a href="index.html#contact" class="inline-flex h-10 items-center hover:text-brand-600">Contact</a>
+          <a href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis / RDV
+            </a>
+        </nav>
+
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-300/70 dark:border-slate-700 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600" aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <script>
+  (function () {
+    const here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a[href], #mobileMenu a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      const file = href.split('#')[0] || 'index.html';
+      if (file === here) {
+        a.setAttribute('aria-current', 'page');
+        a.classList.add('text-brand-700','dark:text-brand-600','font-semibold');
+      } else {
+        a.classList.remove('text-brand-700','dark:text-brand-600','font-semibold');
+      }
+    });
+  })();
+</script>
+
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/60 dark:border-slate-700/50">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html#accueil" class="block py-2">Accueil</a>
+        <a href="formations-cpf.html" class="block py-2 whitespace-nowrap">Formations CPF</a>
+        <a href="formations-entreprises.html" class="block py-2" aria-current="page">Entreprises</a>
+        <a href="certifications.html" class="block py-2">Partenaires</a>
+        <a href="temoignages.html" class="block py-2">Témoignages</a>
+        <a href="index.html#contact" class="block py-2">Contact</a>
+        <a href="legal.html#cgv" class="block py-2">CGV</a>
+        <a href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis / RDV
+            </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-14">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <!-- Hero -->
+      <h1 class="text-3xl font-bold tracking-tight text-center">Formations d’anglais pour Entreprises</h1>
+      <p class="mt-3 text-center text-slate-600 dark:text-slate-300">
+        <strong>Remote-first</strong> sur WhatsApp & visio — 100% personnalisées, sans e-learning. Créneaux étendus (semaine, weekends, jours fériés).
+        Des parcours concrets, axés résultats et adaptés à vos métiers.
+      </p>
+
+      <!-- USP list (refactored) -->
+<ul
+  class="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-1 py-2
+         overflow-visible"
+>
+  <!-- WhatsApp / Visio -->
+  <li
+    class="inline-flex items-center gap-3 rounded-full border border-slate-300/50
+           dark:border-slate-700/60 bg-white/70 dark:bg-slate-800/60
+           px-4 py-2 shadow-sm hover:shadow-md transition"
+  >
+    <span
+      class="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-full
+             bg-brand-50 text-brand-700 ring-1 ring-brand-200/70"
+    >
+      <!-- Video camera icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" />
+      </svg>
+    </span>
+    <span class="text-sm font-medium">WhatsApp • Visio</span>
+  </li>
+
+  <!-- 100% personnalisés -->
+  <li
+    class="inline-flex items-center gap-3 rounded-full border border-slate-300/50
+           dark:border-slate-700/60 bg-white/70 dark:bg-slate-800/60
+           px-4 py-2 shadow-sm hover:shadow-md transition"
+  >
+    <span
+      class="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-full
+             bg-brand-50 text-brand-700 ring-1 ring-brand-200/70"
+    >
+      <!-- Sliders (personalisation) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M8 6v12m8-6H4m12-6v12M4 18h16" />
+      </svg>
+    </span>
+    <span class="text-sm font-medium">100% personnalisé</span>
+  </li>
+
+  <!-- Sans e-learning -->
+  <li
+    class="inline-flex items-center gap-3 rounded-full border border-slate-300/50
+           dark:border-slate-700/60 bg-white/70 dark:bg-slate-800/60
+           px-4 py-2 shadow-sm hover:shadow-md transition"
+  >
+    <span
+      class="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-full
+             bg-brand-50 text-brand-700 ring-1 ring-brand-200/70"
+    >
+      <!-- No symbol -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M18.364 5.636a9 9 0 11-12.728 0 9 9 0 0112.728 0zM15 9l-6 6" />
+      </svg>
+    </span>
+    <span class="text-sm font-medium">Sans e-learning</span>
+  </li>
+
+  <!-- Horaires étendus -->
+  <li
+    class="inline-flex items-center gap-3 rounded-full border border-slate-300/50
+           dark:border-slate-700/60 bg-white/70 dark:bg-slate-800/60
+           px-4 py-2 shadow-sm hover:shadow-md transition"
+  >
+    <span
+      class="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-full
+             bg-brand-50 text-brand-700 ring-1 ring-brand-200/70"
+    >
+      <!-- Calendar (square-friendly, no crop) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3M4 9h16M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    </span>
+    <span class="text-sm font-medium">Semaine • Weekends • Jours fériés</span>
+  </li>
+
+  <!-- Reporting RH clair -->
+  <li
+    class="inline-flex items-center gap-3 rounded-full border border-slate-300/50
+           dark:border-slate-700/60 bg-white/70 dark:bg-slate-800/60
+           px-4 py-2 shadow-sm hover:shadow-md transition"
+  >
+    <span
+      class="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-full
+             bg-brand-50 text-brand-700 ring-1 ring-brand-200/70"
+    >
+      <!-- Chart bar -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 20h18M7 10v6m5-9v9m5-5v5" />
+      </svg>
+    </span>
+    <span class="text-sm font-medium">Reporting RH clair</span>
+  </li>
+</ul>
+
+      <!-- Value & Programs -->
+      <section class="mt-8">
+        <div class="space-y-8 text-slate-700 dark:text-slate-300 text-sm leading-relaxed bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow p-8">
+          <h2 class="font-semibold text-lg">Ce que vos équipes y gagnent</h2>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Confiance à l’oral en réunions, visios, appels et présentations</li>
+            <li>Communication écrite claire : emails, comptes-rendus, offres</li>
+            <li>Vocabulaire et situations <em>métier</em> (la préparation d'entretiens, le marketing, les achats-ventes, la logistique, le management, la tech, les réunions, la négociation, la finance-comptabilité, l'automobile et bien plus.)</li>
+            <li>Possibilité de viser des <strong>certifications reconnues</strong> hors cadre du CPF (Linguaskill, TOEIC, IELTS...)</li>
+          </ul>
+
+          <h2 class="font-semibold text-lg">Parcours types (exemples)</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">
+              <p class="font-medium">Business Speaking</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-400">Coaching oral + mises en situation (réunions, pitch, Q&A).</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">
+              <p class="font-medium">Emailing & Meetings</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-400">Structuration des emails, prises de parole, expressions clés pro.</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">
+              <p class="font-medium">Sales & Negotiation</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-400">Objections, relances, closing, suivi post-réunion.</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">
+              <p class="font-medium">Industry & Tech English</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-400">Anglais technique (spécifique à vos process & docs internes).</p>
+            </div>
+          </div>
+
+          <h2 class="font-semibold text-lg">Organisation & modalités</h2>
+          <ul class="list-disc pl-6 space-y-1">
+            <li><strong>À distance (prioritaire)</strong> : WhatsApp / Zoom / Meet, créneaux souples (tôt, midi, soir, weekends/jours fériés)</li>
+            <li><strong>Présentiel (en option)</strong> : possible sur demande selon localisation</li>
+            <li>Formats : individuel, binôme, micro-groupes ciblés</li>
+            <li>Suivi personnalisé, supports sur mesure, entraînements & examens blancs</li>
+            <li>Reporting RH clair : présences, objectifs, progression, recommandations</li>
+          </ul>
+
+          <h2 class="font-semibold text-lg">Certifications & preuves</h2>
+          <p>Préparation et passage aux certifications : LEVELTEL, PeopleCert (LanguageCert), VTest et hors cadre du CPF (Linguaskill, TOEIC, IELTS...). Attestations et comptes rendus exploitables pour vos dossiers internes.</p>
+
+          <div class="pt-2">
+            <blockquote class="rounded-xl border border-slate-200 dark:border-slate-700 p-4 bg-slate-50 dark:bg-slate-900/40">
+              <p class="italic">« Nous proposons un service adapté aux besoins de nos stagiaires. Notre accompagnement personnalisé permet à nos stagiaires de réaliser leurs objectifs dans les meilleures conditions. »</p>
+            </blockquote>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-3">
+            <a href="index.html#contact" class="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold shadow hover:bg-brand-700">Obtenir une proposition entreprise</a>
+            <a href="certifications.html" class="inline-flex items-center rounded-xl border border-slate-300/80 dark:border-slate-700 px-5 py-3 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800">Voir les certifications</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcomes / Mini KPIs -->
+      <section class="mt-10">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 text-center bg-white dark:bg-slate-800">
+            <p class="text-3xl font-extrabold">100%</p>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Satisfaction (retours stagiaires)</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 text-center bg-white dark:bg-slate-800">
+            <p class="text-3xl font-extrabold">0%</p>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Interruption en cours de prestation</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 text-center bg-white dark:bg-slate-800">
+            <p class="text-3xl font-extrabold">+500</p>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Stagiaires accompagnés</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ entreprise -->
+      <section class="mt-10">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 shadow-sm">
+          <h2 class="text-xl font-bold">FAQ Entreprise</h2>
+          <div class="mt-4 grid sm:grid-cols-2 gap-6 text-sm">
+            <div>
+              <p class="font-medium">Peut-on mixer individuel et micro-groupes ?</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-300">Oui. Nous combinons sessions 1:1 (leviers rapides) et ateliers ciblés (transfert collectif).</p>
+            </div>
+            <div>
+              <p class="font-medium">Comment sont fixés les objectifs ?</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-300">Diagnostic initial, objectifs SMART par collaborateur, jalons et reporting mensuel.</p>
+            </div>
+            <div>
+              <p class="font-medium">Quels outils utilisons-nous ?</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-300">WhatsApp/Zoom/Meet + supports sur mesure (docs internes anonymisés si besoin).</p>
+            </div>
+            <div>
+              <p class="font-medium">Proposez-vous des créneaux en dehors des heures de bureau ?</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-300">Oui : tôt le matin, midi, soir, weekends et jours fériés.</p>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a href="index.html#contact" class="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold shadow hover:bg-brand-700">Parler de mon besoin</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-700 mt-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-center text-xs text-slate-500 space-y-3">
+      <p class="font-semibold">Kamilia Favre</p>
+      <p>Service de formation professionnelle en langue anglaise</p>
+      <p>Déclaration d'activité enregistrée sous le numéro 52 72 02354 72 – Numéro SIRET : 51769619100033</p>
+      <p class="pt-2">© <script>document.write(new Date().getFullYear())</script> Your English Teacher. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
+  </script>
+</body>
+</html>

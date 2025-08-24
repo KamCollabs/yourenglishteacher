@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Partenaires – Your English Teacher</title>
+  <meta name="description" content="Nos partenaires et certifications d’anglais : LEVELTEL, PeopleCert (LanguageCert), VTest, Linguaskill, Pipplet, AGEFIPH. Infos officielles et liens utiles." />
+  <meta property="og:title" content="Partenaires & certifications" />
+  <meta property="og:description" content="LEVELTEL, PeopleCert (LanguageCert), VTest, Linguaskill, Pipplet, AGEFIPH : découvrez nos partenaires et certifications reconnues." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter","ui-sans-serif","system-ui"] },
+          colors: { brand: { 50:"#eff6ff", 600:"#2563eb", 700:"#1d4ed8" } }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { color-scheme: light dark; }
+    .card { border-radius: 1rem; border: 1px solid rgba(148,163,184,.25); }
+  </style>
+</head>
+
+<body class="min-h-screen bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-700/50 py-2 md:py-3">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <a href="index.html#accueil" class="flex items-center gap-2">
+          <img src="assets/logo.png" alt="Your English Teacher"
+               class="h-16 w-16 md:h-20 md:w-20 rounded-2xl transition-transform hover:scale-105">
+          <span class="text-xl md:text-2xl font-semibold tracking-tight">Your English Teacher</span>
+        </a>
+
+        <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-5 md:whitespace-nowrap text-[15px]">
+            <a href="index.html#accueil" class="inline-flex h-10 items-center hover:text-brand-600">Accueil</a>
+            <a href="formations-cpf.html" class="inline-flex h-10 items-center text-brand-700 dark:text-brand-600 font-semibold whitespace-nowrap">Formations CPF</a>
+            <a href="formations-entreprises.html" class="inline-flex h-10 items-center hover:text-brand-600">Entreprises</a>
+            <a href="certifications.html" aria-current="page" class="inline-flex h-10 items-center hover:text-brand-600">Partenaires</a>
+            <a href="temoignages.html" class="inline-flex h-10 items-center hover:text-brand-600">Témoignages</a>
+            <a href="legal.html#cgv" class="inline-flex h-10 items-center hover:text-brand-600">CGV</a>
+            <a href="index.html#contact" class="inline-flex h-10 items-center hover:text-brand-600">Contact</a>
+            <a href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis / RDV
+            </a>
+          </nav>
+
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-300/70 dark:border-slate-700 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600" aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <script>
+  (function () {
+    const here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a[href], #mobileMenu a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      const file = href.split('#')[0] || 'index.html';
+      if (file === here) {
+        a.setAttribute('aria-current', 'page');
+        a.classList.add('text-brand-700','dark:text-brand-600','font-semibold');
+      } else {
+        a.classList.remove('text-brand-700','dark:text-brand-600','font-semibold');
+      }
+    });
+  })();
+</script>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/60 dark:border-slate-700/50">
+      <div class="px-4 py-3 space-y-2">
+        <a href="formations-cpf.html" class="block py-2">Formations CPF</a>
+        <a href="formations-entreprises.html" class="block py-2">Entreprises</a>
+        <a href="partenaires.html" class="block py-2" aria-current="page">Partenaires</a>
+        <a href="temoignages.html" class="block py-2">Témoignages</a>
+        <a href="legal.html#cgv" class="block py-2">CGV</a>
+        <a href="index.html#contact" class="block py-2">Contact</a>
+        <a href="index.html#contact" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700">Devis / RDV</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="py-16 bg-gradient-to-b from-brand-50 to-white dark:from-slate-800 dark:to-slate-900">
+      <div class="mx-auto max-w-5xl px-4">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Partenaires</h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+          Des références reconnues pour valider votre niveau d’anglais et garantir l’accessibilité de nos formations.
+          Préparation dédiée, liens officiels et accompagnement de bout en bout.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="index.html#contact" class="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold shadow hover:bg-brand-700">Parler de mon objectif</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid partenaires -->
+    <section class="py-14">
+      <div class="mx-auto max-w-6xl px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- LEVELTEL -->
+        <article class="group card p-6 bg-white dark:bg-slate-800 text-center transition hover:shadow-lg hover:-translate-y-1">
+          <div class="mx-auto h-64 w-64 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shadow-sm transition group-hover:shadow-md group-hover:scale-[1.01]">
+            <img src="assets/certifications/leveltel.png" alt="LEVELTEL" class="w-56 h-56 object-contain rounded-xl bg-white p-2" loading="lazy">
+          </div>
+          <h2 class="mt-5 font-semibold text-lg">LEVELTEL</h2>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 text-left">
+            Évaluation des performances de communication selon le CECR (compréhension, expression, interaction) en contexte professionnel.
+          </p>
+          <p class="mt-4 text-sm"><a href="https://www.leveltel.com/" target="_blank" rel="noopener" class="underline decoration-dotted hover:text-brand-600">Site officiel LEVELTEL →</a></p>
+        </article>
+
+        <!-- PeopleCert / LanguageCert -->
+        <article class="group card p-6 bg-white dark:bg-slate-800 text-center transition hover:shadow-lg hover:-translate-y-1">
+          <div class="mx-auto h-64 w-64 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shadow-sm transition group-hover:shadow-md group-hover:scale-[1.01]">
+            <img src="assets/certifications/languagecert.png" alt="PeopleCert (LanguageCert)" class="w-56 h-56 object-contain rounded-xl" loading="lazy">
+          </div>
+          <h2 class="mt-5 font-semibold text-lg">PeopleCert (LanguageCert)</h2>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 text-left">
+            Validation CECRL A2→C2 sur 4 compétences (compréhension orale/écrite, expression orale/écrite) pour un contexte professionnel.
+          </p>
+          <p class="mt-4 text-sm"><a href="https://www.languagecert.org/fr" target="_blank" rel="noopener" class="underline decoration-dotted hover:text-brand-600">Site officiel LanguageCert →</a></p>
+        </article>
+
+        <!-- VTest -->
+        <article class="group card p-6 bg-white dark:bg-slate-800 text-center transition hover:shadow-lg hover:-translate-y-1">
+          <div class="mx-auto w-64 h-64 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shadow-sm transition group-hover:shadow-md group-hover:scale-[1.01]">
+            <img src="assets/certifications/vtest.jpeg" alt="VTest Business English" class="w-56 h-56 object-contain rounded-xl" loading="lazy">
+          </div>
+          <h2 class="mt-5 font-semibold text-lg">VTest</h2>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 text-left">
+            Certification Business English (A2→C2) centrée compétences pro : compréhension/production, à l’oral et à l’écrit.
+          </p>
+          <p class="mt-4 text-sm"><a href="https://vtest-france.exassess.com/" target="_blank" rel="noopener" class="underline decoration-dotted hover:text-brand-600">Site officiel VTest →</a></p>
+        </article>
+
+        <!-- Linguaskill -->
+        <article class="group card p-6 bg-white dark:bg-slate-800 text-center transition hover:shadow-lg hover:-translate-y-1">
+          <div class="mx-auto h-64 w-64 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shadow-sm transition group-hover:shadow-md group-hover:scale-[1.01]">
+            <img src="assets/certifications/linguaskill.png" alt="Linguaskill (Cambridge)" class="w-56 h-56 object-contain rounded-xl" loading="lazy">
+          </div>
+          <h2 class="mt-5 font-semibold text-lg">Linguaskill (Cambridge)</h2>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 text-left">
+            Test modulaire rapide par Cambridge, aligné CECR (A1→C1/C2) pour recrutement, mobilité et admissions académiques.
+          </p>
+          <p class="mt-4 text-sm"><a href="https://www.cambridgeenglish.org/fr/exams-and-tests/linguaskill/" target="_blank" rel="noopener" class="underline decoration-dotted hover:text-brand-600">Site officiel Linguaskill →</a></p>
+        </article>
+
+        <!-- Pipplet -->
+        <article class="group card p-6 bg-white dark:bg-slate-800 text-center transition hover:shadow-lg hover:-translate-y-1">
+          <div class="mx-auto h-64 w-64 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shadow-sm transition group-hover:shadow-md group-hover:scale-[1.01]">
+            <img src="assets/certifications/pipplet.jpeg" alt="Pipplet" class="w-56 h-56 object-contain rounded-xl" loading="lazy">
+          </div>
+          <h2 class="mt-5 font-semibold text-lg">Pipplet</h2>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 text-left">
+            Évaluation 100% en ligne des compétences réelles (oral/écrit) — très utilisé en recrutement et mobilité interne.
+          </p>
+          <p class="mt-4 text-sm"><a href="https://www.pipplet.com/fr" target="_blank" rel="noopener" class="underline decoration-dotted hover:text-brand-600">Site officiel Pipplet →</a></p>
+        </article>
+
+        <!-- AGEFIPH -->
+        <article class="group card p-6 bg-white dark:bg-slate-800 text-center transition hover:shadow-lg hover:-translate-y-1">
+          <div class="mx-auto h-64 w-64 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shadow-sm transition group-hover:shadow-md group-hover:scale-[1.01]">
+            <img src="assets/certifications/agefiph.png" alt="AGEFIPH" class="w-56 h-56 object-contain rounded-xl" loading="lazy">
+          </div>
+          <h2 class="mt-5 font-semibold text-lg">AGEFIPH</h2>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 text-left">
+            Partenaire pour l’accessibilité et l’accompagnement des personnes en situation de handicap : aménagements, aides et conseils.
+          </p>
+          <p class="mt-4 text-sm"><a href="https://www.agefiph.fr/" target="_blank" rel="noopener" class="underline decoration-dotted hover:text-brand-600">Site officiel AGEFIPH →</a></p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-700">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+      <div>
+        <p class="font-semibold">Your English Teacher</p>
+        <p class="mt-2 text-slate-600 dark:text-slate-400">Formations d'anglais pour particuliers et professionnels en France.</p>
+      </div>
+      <div>
+        <p class="font-semibold">Liens</p>
+        <ul class="mt-2 space-y-2">
+          <li><a href="formations-cpf.html" class="hover:underline">Formations CPF</a></li>
+          <li><a href="formations-entreprises.html" class="hover:underline">Entreprises</a></li>
+          <li><a href="partenaires.html" class="hover:underline">Partenaires</a></li>
+          <li><a href="legal.html#cgv" class="hover:underline">CGV</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">Légal</p>
+        <ul class="mt-2 space-y-2">
+          <li><a href="legal.html#mentions" class="hover:underline">Mentions légales</a></li>
+          <li><a href="legal.html#politique" class="hover:underline">Politique de confidentialité</a></li>
+          <li><a href="legal.html#certificats" class="hover:underline">Certificats QUALIOPI</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">Nous suivre</p>
+        <ul class="mt-2 space-y-2">
+          <li class="flex items-center gap-2">
+            <img src="assets/linkedin.svg" alt="" class="h-4 w-4">
+            <a href="https://www.linkedin.com/in/kamilia-daaibes-favre-98939631/" target="_blank" rel="noopener" class="hover:underline">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500 space-y-2">
+      <p class="font-semibold">Kamilia Favre</p>
+      <p>Service de formation professionnelle en langue anglaise</p>
+      <p>Déclaration d'activité enregistrée sous le numéro <span class="font-medium">52 72 02354 72</span> – SIRET : <span class="font-medium">51769619100033</span></p>
+      <p class="pt-2">© <script>document.write(new Date().getFullYear())</script> Your English Teacher. Tous droits réservés.</p>
+      <div class="pb-6"></div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Témoignages – Your English Teacher</title>
+  <meta name="description" content="Avis d'apprenants : progression réelle, accompagnement humain, flexibilité maximale. Cours d’anglais personnalisés avec Your English Teacher." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter","ui-sans-serif","system-ui","-apple-system","Segoe UI","Roboto","Helvetica Neue","Arial","Noto Sans","sans-serif"] },
+          colors: { brand: { 50:"#eff6ff", 100:"#dbeafe", 200:"#bfdbfe", 600:"#2563eb", 700:"#1d4ed8" } }
+        }
+      }
+    }
+  </script>
+  <style>:root { color-scheme: light dark; }</style>
+</head>
+
+<body class="min-h-screen bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Header (same look as other pages) -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-700/50 py-2 md:py-3">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <a href="index.html#accueil" class="flex items-center gap-2">
+          <img src="assets/logo.png" alt="Your English Teacher"
+               class="h-16 w-16 md:h-20 md:w-20 rounded-2xl transition-transform hover:scale-105" />
+          <span class="text-xl md:text-2xl font-semibold tracking-tight">Your English Teacher</span>
+        </a>
+
+        <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-5">
+          <a href="index.html#accueil" class="inline-flex h-10 items-center hover:text-brand-600">Accueil</a>
+          <a href="formations-cpf.html" class="inline-flex h-10 items-center text-brand-700 dark:text-brand-600 font-semibold whitespace-nowrap">Formations CPF</a>
+          <a href="formations-entreprises.html" class="inline-flex h-10 items-center hover:text-brand-600">Entreprises</a>
+          <a href="certifications.html" class="inline-flex h-10 items-center hover:text-brand-600">Partenaires</a>
+          <a href="temoignages.html" aria-current="page" class="inline-flex h-10 items-center hover:text-brand-600">Témoignages</a>
+          <a href="legal.html#cgv" class="inline-flex h-10 items-center hover:text-brand-600">CGV</a>
+          <a href="index.html#contact" class="inline-flex h-10 items-center hover:text-brand-600">Contact</a>
+          <a href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis / RDV
+          </a>
+        </nav>
+
+        <!-- Mobile -->
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-300/70 dark:border-slate-700 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600" aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <script>
+  (function () {
+    const here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a[href], #mobileMenu a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      const file = href.split('#')[0] || 'index.html';
+      if (file === here) {
+        a.setAttribute('aria-current', 'page');
+        a.classList.add('text-brand-700','dark:text-brand-600','font-semibold');
+      } else {
+        a.classList.remove('text-brand-700','dark:text-brand-600','font-semibold');
+      }
+    });
+  })();
+</script>
+
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/60 dark:border-slate-700/50">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html#accueil" class="block py-2">Accueil</a>
+    <a href="formations-cpf.html" class="block py-2 whitespace-nowrap">Formations CPF</a>
+    <a href="formations-entreprises.html" class="block py-2">Entreprises</a>
+    <a href="certifications.html" class="block py-2">Partenaires</a>
+    <a href="temoignages.html" class="block py-2" aria-current="page">Témoignages</a>
+    <a href="index.html#contact" class="block py-2">Contact</a>
+    <a href="legal.html#cgv" class="block py-2">CGV</a>
+        <a href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis / RDV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero (solid backgrounds, no gradient) -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Nos témoignages</h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+          Retours d’expérience authentiques : progression réelle, accompagnement humain, flexibilité maximale.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials grid -->
+    <section class="pb-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- ===== ORIGINAL 6 (unchanged) ===== -->
+          <figure class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 shadow-sm">
+            <blockquote class="text-sm text-slate-700 dark:text-slate-300">“Ce n'est pas évident d'apprendre une nouvelle langue mais Kamilia a su me mettre à l'aise, ce qui m'a permis de prendre confiance à moi. Elle est très bonne pédagogue et passionnée avec ses différentes méthodes d'enseigner. C'était une expérience enrichissante.”</blockquote>
+            <figcaption class="mt-4 text-sm font-medium">Eliane B. – En recherche d'emploi</figcaption>
+          </figure>
+
+          <figure class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 shadow-sm">
+            <blockquote class="text-sm text-slate-700 dark:text-slate-300">“La formation s'est très bien déroulée. La formatrice est exigeante dans le bon sens du terme. Ce qui m'a motivée pour reprendre une autre formation avec elle.”</blockquote>
+            <figcaption class="mt-4 text-sm font-medium">Sophie B. – Comptable</figcaption>
+          </figure>
+
+          <figure class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 shadow-sm">
+            <blockquote class="text-sm text-slate-700 dark:text-slate-300">“Kamilia est une enseignante bienveillante, motivante et empathique, elle a su m'accompagner dans l'apprentissage de l'anglais et prendre confiance en moi pour atteindre mes objectifs. Je la recommande sincèrement pour tous professionnels ou particuliers voulant suivre une formation d'anglais. Vous verrez une réelle progression.”</blockquote>
+            <figcaption class="mt-4 text-sm font-medium">Feyrouz B. – Responsable du développement commercial</figcaption>
+          </figure>
+
+          <figure class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 shadow-sm">
+            <blockquote class="text-sm text-slate-700 dark:text-slate-300">“Mon rythme professionnel avait augmenté, ce qui avait rendu la tâche difficile pour me former comme mon planning était plus complexe. Grâce à l'organisation et à la flexibilité de Kamilia, j'ai pu terminer ma formation et réussir mes objectifs ! Je recommande vivement.”</blockquote>
+            <figcaption class="mt-4 text-sm font-medium">Davith V.K. – Commercial</figcaption>
+          </figure>
+
+          <figure class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 shadow-sm">
+            <blockquote class="text-sm text-slate-700 dark:text-slate-300">“J'ai beaucoup apprécié la structuration des cours et la patience de Kamilia qui est pédagogique dans sa manière de nous laisser être notre auto-correcteur sur l'ensemble des aspects, grammaire, syntaxe et prononciation. Je recommande Kamilia fortement.”</blockquote>
+            <figcaption class="mt-4 text-sm font-medium">Baptiste C. – Assistant Administratif</figcaption>
+          </figure>
+
+          <figure class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 shadow-sm">
+            <blockquote class="text-sm text-slate-700 dark:text-slate-300">“La formatrice était très gentille et professionnelle. Elle a su s'adapter à mon emploi du temps et à mon niveau. J'ai trouvé la formation excellente. Je recommande cette formation.”</blockquote>
+            <figcaption class="mt-4 text-sm font-medium">Steven C. – Commercial</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same pattern as index) -->
+  <footer class="border-t border-slate-200 dark:border-slate-700">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+      <div>
+        <p class="font-semibold">Your English Teacher</p>
+        <p class="mt-2 text-slate-600 dark:text-slate-400">Formations d'anglais pour particuliers et professionnels en France.</p>
+      </div>
+      <div>
+        <p class="font-semibold">Liens</p>
+        <ul class="mt-2 space-y-2">
+          <li><a href="formations-cpf.html" class="hover:underline">Formations CPF</a></li>
+          <li><a href="formations-entreprises.html" class="hover:underline">Entreprises</a></li>
+          <li><a href="certifications.html" class="hover:underline">Certifications</a></li>
+          <li><a href="legal.html#cgv" class="hover:underline">CGV</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">Légal</p>
+        <ul class="mt-2 space-y-2">
+          <li><a href="legal.html#mentions" class="hover:underline">Mentions légales</a></li>
+          <li><a href="legal.html#politique" class="hover:underline">Politique de confidentialité</a></li>
+          <li><a href="legal.html#certificats" class="hover:underline">Certificats QUALIOPI</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">Nous suivre</p>
+        <ul class="mt-2 space-y-2">
+          <li class="flex items-center gap-2">
+            <img src="assets/linkedin.svg" alt="LinkedIn" class="w-4 h-4" />
+            <a href="https://www.linkedin.com/in/kamilia-daaibes-favre-98939631/" target="_blank" rel="noopener" class="hover:underline">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500 space-y-2">
+      <p class="font-semibold">Kamilia Favre</p>
+      <p>Service de formation professionnelle en langue anglaise</p>
+      <p>Déclaration d'activité enregistrée sous le numéro <span class="font-medium">52 72 02354 72</span> auprès du préfet de la région des Pays-de-la-Loire (DREETS) – Numéro SIRET : <span class="font-medium">51769619100033</span></p>
+      <p class="pt-2">© <span id="year"></span> Your English Teacher. Tous droits réservés.</p>
+      <div class="pb-6"></div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

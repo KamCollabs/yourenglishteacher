@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formations CPF – Your English Teacher</title>
+    <meta
+      name="description"
+      content="Cours d’anglais CPF 100% à distance via WhatsApp, 100% personnalisés, sans e-learning. Disponibles en semaine, week-ends et jours fériés. Accompagnement premium jusqu’à l’atteinte de vos objectifs."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: { 50: '#eff6ff', 200: '#bfdbfe', 600: '#2563eb', 700: '#1d4ed8' }
+            },
+            fontFamily: {
+              sans: [
+                'Inter',
+                'ui-sans-serif',
+                'system-ui',
+                '-apple-system',
+                'Segoe UI',
+                'Roboto',
+                'Helvetica Neue',
+                'Arial',
+                'Noto Sans',
+                'sans-serif'
+              ]
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root { color-scheme: light dark; }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-700/50 py-2 md:py-3">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-20 items-center justify-between">
+          <a href="index.html#accueil" class="flex items-center gap-2">
+            <img src="assets/logo.png" alt="Your English Teacher" class="h-16 w-16 md:h-20 md:w-20 rounded-2xl transition-transform hover:scale-105" />
+            <span class="text-xl md:text-2xl font-semibold tracking-tight">Your English Teacher</span>
+          </a>
+
+          <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-5 md:whitespace-nowrap text-[15px]">
+            <a href="index.html#accueil" class="inline-flex h-10 items-center hover:text-brand-600">Accueil</a>
+            <a href="formations-cpf.html" aria-current="page" class="inline-flex h-10 items-center text-brand-700 dark:text-brand-600 font-semibold whitespace-nowrap">Formations CPF</a>
+            <a href="formations-entreprises.html" class="inline-flex h-10 items-center hover:text-brand-600">Entreprises</a>
+            <a href="certifications.html" class="inline-flex h-10 items-center hover:text-brand-600">Partenaires</a>
+            <a href="temoignages.html" class="inline-flex h-10 items-center hover:text-brand-600">Témoignages</a>
+            <a href="legal.html#cgv" class="inline-flex h-10 items-center hover:text-brand-600">CGV</a>
+            <a href="index.html#contact" class="inline-flex h-10 items-center hover:text-brand-600">Contact</a>
+            <a href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis / RDV
+            </a>
+          </nav>
+
+          <button
+            id="menuBtn"
+            class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-300/70 dark:border-slate-700 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
+            aria-controls="mobileMenu"
+            aria-expanded="false"
+            aria-label="Ouvrir le menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <script>
+  (function () {
+    const here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a[href], #mobileMenu a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      const file = href.split('#')[0] || 'index.html';
+      if (file === here) {
+        a.setAttribute('aria-current', 'page');
+        a.classList.add('text-brand-700','dark:text-brand-600','font-semibold');
+      } else {
+        a.classList.remove('text-brand-700','dark:text-brand-600','font-semibold');
+      }
+    });
+  })();
+</script>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/60 dark:border-slate-700/50">
+        <div class="px-4 py-3 space-y-2">
+          <a href="index.html#accueil" class="block py-2">Accueil</a>
+          <a href="formations-cpf.html" class="block py-2 whitespace-nowrap" aria-current="page">Formations CPF</a>
+          <a href="formations-entreprises.html" class="block py-2">Entreprises</a>
+          <a href="certifications.html" class="block py-2">Partenaires</a>
+          <a href="temoignages.html" class="block py-2">Témoignages</a>
+          <a href="index.html#contact" class="block py-2">Contact</a>
+          <a href="legal.html#cgv" class="block py-2">CGV</a>
+          <a href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis / RDV
+            </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-16">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl font-extrabold tracking-tight">Formations CPF 100% à distance, 100% personnalisées</h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+          Cours d’anglais <strong>via WhatsApp</strong> — <strong>sans e-learning</strong>, avec un formateur dédié.
+          Disponibles <strong>en semaine, le week-end et les jours fériés</strong>, pour s’adapter à votre rythme.
+          <br />
+          <span class="font-medium">
+            Nous proposons un service adapté aux besoins de nos stagiaires. Notre accompagnement personnalisé permet à nos stagiaires de réaliser leurs objectifs dans les meilleures conditions.
+          </span>
+        </p>
+
+        <!-- Value props -->
+        <div class="mt-10 grid gap-6 text-left sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-6 shadow-sm">
+            <h3 class="font-semibold text-lg mb-2">Flexibilité totale</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Créneaux élargis (matin, midi, soir, week-ends, jours fériés) pour concilier formation et emploi du temps chargé.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-6 shadow-sm">
+            <h3 class="font-semibold text-lg mb-2">100% personnalisé</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Parcours sur-mesure aligné sur vos objectifs (entretien, emailing pro, réunions, mobilité) — zéro plateforme impersonnelle.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-6 shadow-sm">
+            <h3 class="font-semibold text-lg mb-2">Suivi premium</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Diagnostic initial, plan de progression, devoirs corrigés, feedback continu et examens blancs.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-6 shadow-sm">
+            <h3 class="font-semibold text-lg mb-2">CPF & certifications</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Préparation aux certifications reconnues (LEVELTEL, PeopleCert, VTest) selon votre projet.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-6 shadow-sm">
+            <h3 class="font-semibold text-lg mb-2">Simple & efficace</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Tout se fait à distance sur WhatsApp, sans installation complexe, où que vous soyez.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-6 shadow-sm">
+            <h3 class="font-semibold text-lg mb-2">Résultats concrets</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Objectifs mesurables, progression visible et attestation — pensés pour l’impact professionnel.</p>
+          </div>
+        </div>
+
+        <!-- Certifications (inserted) -->
+        <section id="certifications" class="mt-14 text-left">
+          <div class="mx-auto max-w-6xl">
+            <h2 class="text-2xl font-bold">Certifications d’anglais reconnues</h2>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">
+              Choisissez la certification adaptée à vos objectifs (emploi, études, mobilité). Préparation au <strong>LEVELTEL</strong>,
+              <strong>PeopleCert (LanguageCert)</strong> et <strong>VTest</strong> — entraînements ciblés, examens blancs et stratégies d’épreuve.
+            </p>
+
+            <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <!-- LEVELTEL -->
+              <article class="group rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 text-center transition hover:shadow-lg hover:-translate-y-0.5">
+                <div class="mx-auto h-64 w-64 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shadow-sm transition group-hover:shadow-md group-hover:scale-[1.01]">
+                  <img src="assets/certifications/leveltel.png" alt="LEVELTEL" class="w-56 h-56 object-contain rounded-xl bg-white p-2" loading="lazy" />
+                </div>
+                <h3 class="mt-5 font-semibold text-lg">LEVELTEL</h3>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 text-left">
+                  Évalue la communication en situation professionnelle/personnelle selon le CECR (compréhension, expression, interaction).
+                  Multilingue (anglais, allemand, espagnol, italien, FLE).
+                </p>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300"><em>Reconnu par les professionnels du recrutement et de l'intérim.</em></p>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Enregistré au Répertoire spécifique (France Compétences).</p>
+                <p class="mt-4 text-sm">
+                  <a href="https://www.leveltel.com/" target="_blank" rel="noopener" class="underline decoration-dotted hover:text-brand-600">Site officiel LEVELTEL →</a>
+                </p>
+              </article>
+
+              <!-- PeopleCert / LanguageCert -->
+              <article class="group rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 text-center transition hover:shadow-lg hover:-translate-y-0.5">
+                <div class="mx-auto h-64 w-64 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shadow-sm transition group-hover:shadow-md group-hover:scale-[1.01]">
+                  <img src="assets/certifications/languagecert.png" alt="PeopleCert (LanguageCert)" class="w-56 h-56 object-contain rounded-xl" loading="lazy" />
+                </div>
+                <h3 class="mt-5 font-semibold text-lg">PeopleCert (LanguageCert)</h3>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 text-left">
+                  Valide écoute, lecture, expression orale et écrite. Attestation CECRL (A2 → C2) valorisable en contexte professionnel
+                  anglophone.
+                </p>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300"><em>Reconnu par les professionnels du recrutement et de l'intérim.</em></p>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Enregistré au Répertoire spécifique.</p>
+                <p class="mt-4 text-sm">
+                  <a href="https://www.languagecert.org/fr" target="_blank" rel="noopener" class="underline decoration-dotted hover:text-brand-600">Site officiel LanguageCert →</a>
+                </p>
+              </article>
+
+              <!-- VTest -->
+              <article class="group rounded-2xl border border-slate-200 dark:border-slate-700 p-6 bg-white dark:bg-slate-800 text-center transition hover:shadow-lg hover:-translate-y-0.5">
+                <div class="mx-auto h-64 w-64 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shadow-sm transition group-hover:shadow-md group-hover:scale-[1.01]">
+                  <img src="assets/certifications/vtest.jpeg" alt="VTest Business English" class="w-56 h-56 object-contain rounded-xl" loading="lazy" />
+                </div>
+                <h3 class="mt-5 font-semibold text-lg">VTest</h3>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 text-left">
+                  VTest Business English – 4 Skills (A2 → C2) pour certifier compréhension & expression, à l’oral et à l’écrit,
+                  en contexte professionnel. Reconnue en France et à l’international.
+                </p>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300"><em>Reconnu par les professionnels du recrutement et de l'intérim.</em></p>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Enregistré au Répertoire spécifique.</p>
+                <p class="mt-4 text-sm">
+                  <a href="https://vtest-france.exassess.com/" target="_blank" rel="noopener" class="underline decoration-dotted hover:text-brand-600">Site officiel VTest →</a>
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dual CTA -->
+        <div class="mt-14 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="index.html#contact"
+            class="inline-flex items-center rounded-xl bg-brand-600 px-6 py-3 text-white font-semibold shadow hover:bg-brand-700 focus-visible:ring-2 focus-visible:ring-brand-600"
+          >
+            Parler de mon besoin
+          </a>
+
+          <a
+            href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/modalite/resultats?q=%7B%22ou%22:%7B%22modality%22:%22A_DISTANCE%22%7D,%22debutPagination%22:1,%22nombreOccurences%22:10,%22contexteFormation%22:%22ACTIVITE_PROFESSIONNELLE%22,%22quoiReferentiel%22:%7B%22code%22:%2215234%22,%22libelle%22:%22ANGLAIS%22,%22type%22:%22FORMACODE%22,%22publics%22:%5B%22GD_PUBLIC%22%5D%7D,%22quoi%22:null,%22certifications%22:null,%22distance%22:null,%22nomOrganisme%22:%22FAVRE%22,%22conformiteReglementaire%22:null,%22endDate%22:null,%22startDate%22:null,%22evaluation%22:null,%22niveauSortie%22:null,%22minPrix%22:null,%22maxPrix%22:null,%22rythme%22:null,%22onlyWithAbondementsEligibles%22:false,%22durationHours%22:null%7D"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center rounded-xl border border-slate-300/80 dark:border-slate-700 px-6 py-3 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800"
+          >
+            📖 Lien vers notre catalogue CPF sur la plateforme MonCompteFormation
+          </a>
+        </div>
+      </div>
+
+      <!-- Process -->
+      <section class="mt-16">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow">
+            <h2 class="text-2xl font-bold">Comment ça marche&nbsp;?</h2>
+            <ol class="mt-4 list-decimal pl-6 space-y-2 text-slate-700 dark:text-slate-300">
+              <li><span class="font-medium">Diagnostic & objectifs&nbsp;:</span> évaluation de départ + cadrage de vos priorités.</li>
+              <li><span class="font-medium">Parcours sur-mesure&nbsp;:</span> séances complètes, 100% à distance via WhatsApp.</li>
+              <li><span class="font-medium">Suivi & feedback&nbsp;:</span> devoirs, corrections, mises en situation, conseils pratiques.</li>
+              <li><span class="font-medium">Certification&nbsp;:</span> préparation ciblée (LEVELTEL, PeopleCert, VTest).</li>
+            </ol>
+            <div class="mt-6">
+              <a href="index.html#contact" class="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white font-semibold shadow hover:bg-brand-700">Démarrer mon parcours</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ micro -->
+      <section class="mt-12">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="rounded-2xl bg-slate-800/30 border border-slate-700/50 p-6 shadow-sm">
+              <h3 class="text-white font-semibold text-base leading-snug">Est-ce du e-learning&nbsp;?</h3>
+              <p class="mt-2 text-sm text-slate-300">Non. C’est un accompagnement humain, individualisé, en direct sur WhatsApp (audio/visio) avec un formateur.</p>
+            </article>
+
+            <article class="rounded-2xl bg-slate-800/30 border border-slate-700/50 p-6 shadow-sm">
+              <h3 class="text-white font-semibold text-base leading-snug">Puis-je me former le week-end&nbsp;?</h3>
+              <p class="mt-2 text-sm text-slate-300">Oui. Nous proposons des créneaux en semaine, le week-end et les jours fériés pour s’adapter à votre agenda.</p>
+            </article>
+
+            <article class="rounded-2xl bg-slate-800/30 border border-slate-700/50 p-6 shadow-sm">
+              <h3 class="text-white font-semibold text-base leading-snug">Suis-je accompagné pour le <span class="whitespace-nowrap">CPF&nbsp;?</span></h3>
+              <p class="mt-2 text-sm text-slate-300">Oui. Nous vous guidons pour constituer votre dossier et choisir la certification la plus pertinente.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-700 mt-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-center text-xs text-slate-500 space-y-3">
+        <p class="font-semibold">Kamilia Favre</p>
+        <p>Service de formation professionnelle en langue anglaise</p>
+        <p>Déclaration d'activité enregistrée sous le numéro 52 72 02354 72 – Numéro SIRET : 51769619100033</p>
+        <p class="pt-2">© <script>document.write(new Date().getFullYear())</script> Your English Teacher. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobileMenu');
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const isOpen = menu.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+    </script>
+  </body>
+</html>

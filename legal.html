@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centre d’informations légales – Your English Teacher</title>
+  <meta name="description" content="CGV, Mentions légales, Politique de confidentialité et Certificats QUALIOPI de Your English Teacher." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: { 50:'#eff6ff', 200:'#bfdbfe', 600:'#2563eb'} } } }
+    }
+  </script>
+  <style>
+    :root { color-scheme: light dark; }
+
+    /* ---------- TAB BAR ---------- */
+    .tabs-bar{
+      border-radius: 1rem; /* rounded-2xl */
+      padding: .5rem;
+      /* No background/border: matches page background */
+    }
+
+    /* ---------- PILL TABS ---------- */
+    .tab-btn{
+      position: relative;
+      overflow: hidden;
+      border-radius: .75rem;
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,.7);
+      padding: .5rem .875rem;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease, background-color .18s ease;
+      will-change: transform, box-shadow;
+    }
+    .tab-btn:hover{
+      transform: translateY(-1px);
+      border-color: rgb(203 213 225);       /* slate-300 */
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    }
+    .tab-btn:focus-visible{
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.25);
+    }
+
+    /* Dark mode defaults for inactive tabs (transparent with white text/border) */
+    .dark .tab-btn{
+      color: white;
+      border-color: rgba(255,255,255,.45);
+    }
+    .dark .tab-btn:hover{
+      border-color: rgba(255,255,255,.8);
+      box-shadow: 0 6px 18px rgba(0,0,0,.35);
+    }
+    .dark .tab-btn:focus-visible{
+      box-shadow: 0 0 0 3px rgba(255,255,255,.3);
+    }
+
+    /* Active state: white background pill, dark text */
+    .tab-btn.active{
+      background: white;                    /* white bg */
+      color: rgb(30 41 59);                 /* slate-800 text */
+      border-color: white;
+      box-shadow: 0 10px 26px rgba(0,0,0,.15);
+    }
+    .dark .tab-btn.active{
+      box-shadow: 0 10px 26px rgba(37,99,235,.28);
+    }
+
+    /* Animated white underline inside active pill */
+    .tab-btn .ink{
+      position: absolute;
+      left: 10px; right: 10px; bottom: 6px;
+      height: 2px; border-radius: 9999px;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,1) 50%, transparent 100%);
+      background-size: 200% 100%;
+      opacity: 0; transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform .28s ease, opacity .2s ease;
+    }
+    .tab-btn.active .ink{
+      opacity: 1; transform: scaleX(1);
+      animation: ink-shimmer 1.2s ease-in-out infinite;
+    }
+    @keyframes ink-shimmer { from { background-position: 0% 0; } to { background-position: 100% 0; } }
+
+    /* Click ripple (subtle) */
+    .tab-btn .ripple{
+      position: absolute;
+      left: var(--x); top: var(--y);
+      width: 0; height: 0;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 60%);
+      animation: ripple 600ms ease-out forwards;
+    }
+    @keyframes ripple { from { width: 0; height: 0; opacity: .6; } to { width: 320px; height: 320px; opacity: 0; } }
+
+    /* Panel transition */
+    .panel{ opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .25s ease; }
+    .panel.is-active{ opacity: 1; transform: translateY(0); }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .tab-btn, .panel { transition: none !important; }
+      .tab-btn .ink { animation: none !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Header with Back button -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-700/50 py-2 md:py-3">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-20 items-center justify-between">
+      <a href="index.html#accueil" class="flex items-center gap-2">
+        <img src="assets/logo.png" alt="Your English Teacher"
+             class="h-16 w-16 md:h-20 md:w-20 rounded-2xl transition-transform hover:scale-105">
+        <span class="text-xl md:text-2xl font-semibold tracking-tight">Your English Teacher</span>
+      </a>
+
+      <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-5 md:whitespace-nowrap text-[15px]">
+        <a href="index.html#accueil" class="inline-flex h-10 items-center hover:text-brand-600">Accueil</a>
+        <a href="formations-cpf.html" class="inline-flex h-10 items-center text-brand-700 dark:text-brand-600 font-semibold whitespace-nowrap">Formations CPF</a>
+        <a href="formations-entreprises.html" class="inline-flex h-10 items-center hover:text-brand-600">Entreprises</a>
+        <a href="certifications.html" class="inline-flex h-10 items-center hover:text-brand-600">Partenaires</a>
+        <a href="temoignages.html" class="inline-flex h-10 items-center hover:text-brand-600">Témoignages</a>
+        <a href="legal.html#cgv" aria-current="page" class="inline-flex h-10 items-center hover:text-brand-600">CGV</a>
+        <a href="index.html#contact" class="inline-flex h-10 items-center hover:text-brand-600">Contact</a>
+        <a href="index.html#contact"
+            class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+            Devis / RDV
+        </a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-300/70 dark:border-slate-700 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600" aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <script>
+  (function () {
+    const here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a[href], #mobileMenu a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      const file = href.split('#')[0] || 'index.html';
+      if (file === here) {
+        a.setAttribute('aria-current', 'page');
+        a.classList.add('text-brand-700','dark:text-brand-600','font-semibold');
+      } else {
+        a.classList.remove('text-brand-700','dark:text-brand-600','font-semibold');
+      }
+    });
+  })();
+</script>
+
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/60 dark:border-slate-700/50">
+    <div class="px-4 py-3 space-y-2">
+      <a href="index.html#accueil" class="block py-2">Accueil</a>
+      <a href="formations-cpf.html" class="block py-2 whitespace-nowrap">Formations CPF</a>
+      <a href="formations-entreprises.html" class="block py-2">Entreprises</a>
+      <a href="certifications.html" class="block py-2">Partenaires</a>
+      <a href="temoignages.html" class="block py-2">Témoignages</a>
+      <a href="index.html#contact" class="block py-2">Contact</a>
+      <a href="legal.html#cgv" class="block py-2" aria-current="page">CGV</a>
+      <a href="index.html#contact"
+              class="ml-2 inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 whitespace-nowrap">
+              Devis / RDV
+            </a>
+    </div>
+  </div>
+</header>
+
+  <main class="py-14">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold tracking-tight text-center">Centre d’informations</h1>
+      <p class="mt-3 text-center text-slate-600 dark:text-slate-300">CGV • Mentions légales • Politique de confidentialité • Certificats QUALIOPI</p>
+
+      <!-- Tab bar -->
+      <div class="tabs-bar mt-8 flex flex-wrap gap-2 justify-center">
+        <button data-panel="cgv" class="tab-btn">
+          <span>CGV</span><span class="ink" aria-hidden="true"></span>
+        </button>
+        <button data-panel="mentions" class="tab-btn">
+          <span>Mentions légales</span><span class="ink" aria-hidden="true"></span>
+        </button>
+        <button data-panel="politique" class="tab-btn">
+          <span>Politique de confidentialité</span><span class="ink" aria-hidden="true"></span>
+        </button>
+        <button data-panel="certificats" class="tab-btn">
+          <span>Certificats QUALIOPI</span><span class="ink" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Panels -->
+      <section id="cgv" class="panel mt-6 hidden">
+        <div class="space-y-8 text-slate-700 dark:text-slate-300 text-sm leading-relaxed bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow p-8">
+          <p class="text-center text-xs italic">Document actualisé le 08/05/2025</p>
+
+          <h2 class="font-semibold text-lg">Modalités de règlement</h2>
+          <p>Le paiement sera dû en totalité à réception d'une facture émise par l'organisme de formation à destination du bénéficiaire.</p>
+
+          <h2 class="font-semibold text-lg">Non réalisation de la prestation de formation</h2>
+          <p>En application de l'article L6354-1 du Code du travail, il est convenu entre les signataires de la présente convention, que faute de résiliation totale ou partielle de la prestation de formation, l'organisme prestataire doit rembourser au cocontractant les sommes indûment perçues de ce fait.</p>
+
+          <h2 class="font-semibold text-lg">Obligations et force majeure</h2>
+          <p>Dans le cadre de ses prestations de formation, Kamilia Favre est tenue à une obligation de moyen et non de résultat vis-à-vis de ses Clients ou de ses Stagiaires. Kamilia Favre ne pourra être tenue responsable en cas d'inexécution de ses obligations résultant d'un événement fortuit ou de force majeure (maladie, accident, grèves, désastres naturels, incendies, interruption des télécommunications, énergie ou transports, etc.).</p>
+
+          <h2 class="font-semibold text-lg">Devis et attestation</h2>
+          <p>Pour chaque action de formation, un devis est adressé en deux exemplaires par Kamilia Favre au Client. Un exemplaire dûment renseigné, daté, tamponné, signé et revêtu de la mention « Bon pour accord » doivent être retourné à Kamilia Favre par e-mail. Le cas échéant une convention particulière peut être établie entre Kamilia Favre, l'OPCO ou le Client. À l'issue de la formation, Kamilia Favre remet une attestation de formation au Stagiaire. Dans le cas d'une prise en charge partielle ou totale par un OPCO, Kamilia Favre lui fait parvenir un exemplaire de la feuille d'émargement accompagné de la facture. Une attestation d'assiduité́ pour chaque Stagiaire peut être fournie au Client, à sa demande.</p>
+
+          <h2 class="font-semibold text-lg">Dédommagement, réparation ou dédit</h2>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Plus d’1 mois avant : 50% du coût dû.</li>
+            <li>Entre 1 mois et 2 semaines avant : 70% dû.</li>
+            <li>Moins de 2 semaines avant : 100% dû.</li>
+          </ul>
+          <p class="mt-2">Le coût ne pourra faire l'objet d'une demande de remboursement ou de prise en charge par l'OPCO.</p>
+
+          <h2 class="font-semibold text-lg">Propriété intellectuelle et copyright</h2>
+          <p>L'ensemble des fiches de présentation, contenus et supports pédagogiques quelle qu'en soit la forme (papier, électronique, numérique, orale...) utilisés par Kamilia Favre pour assurer les formations ou remis aux Stagiaires constituent des œuvres originales et à̀ ce titre sont protégées par la propriété́ intellectuelle et le copyright. À ce titre, le Client et le Stagiaire s'interdisent d'utiliser, transmettre, reproduire, exploiter ou transformer tout ou partie de ces documents, sans un accord exprès de Kamilia Favre. Cette interdiction porte, en particulier, sur toute utilisation faite par le Client et le Stagiaire en vue de l'organisation ou l'animation de formations.</p>
+
+          <h2 class="font-semibold text-lg">Descriptif et programme des formations</h2>
+          <p>Les contenus des programmes, tels qu'ils figurent sur les fiches de présentation des formations sont fournis à titre indicatif. L'intervenant ou le responsable pédagogique se réservent le droit de les modifier en fonction de l'actualité́, du niveau des participants ou de la dynamique du groupe.</p>
+
+          <h2 class="font-semibold text-lg">Confidentialité́ et communication</h2>
+          <p>Kamilia Favre, le Client et le Stagiaire s'engagent à garder confidentiels les documents et les informations auxquels ils pourraient avoir accès au cours de la prestation de formation ou à l'occasion des échanges intervenus antérieurement à l'inscription, notamment l'ensemble des éléments figurant dans la proposition transmise par Kamilia Favre au Client. Kamilia Favre s'engage à ne pas communiquer à des tiers autres que les partenaires avec lesquels sont organisées les formations et aux OPCO, les informations transmises par le Client y compris les informations concernant les Stagiaires. Cependant, le Client accepte d'être cité par Kamilia Favre comme client de ses formations. À cet effet, le Client autorise Kamilia Favre à mentionner son nom, son logo ainsi qu'une description objective de la nature des prestations dans ses listes de références et propositions à l'attention de ses prospects et de sa clientèle, entretiens avec des tiers, rapports d'activité́, site internet, ainsi qu'en cas de dispositions légales, réglementaires ou comptables l'exigeant.</p>
+
+          <h2 class="font-semibold text-lg">Protection et accès aux informations à caractère personnel</h2>
+          <p>Le Client s'engage à informer chaque Stagiaire que :</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>des données à caractère personnel le concernant sont collectées et traitées aux fins de suivi de la validation de la formation et d'amélioration de l'offre de Kamilia Favre</li>
+            <li>conformément à la loi n° 78-17 du 6 janvier 1978, le Stagiaire dispose d'un droit d'accès, de modification, de rectification des données à caractère personnel le concernant. Le Stagiaire pourra exercer ce droit en écrivant à : Kamilia Favre. En particulier, Kamilia Favre conservera les données liées au parcours et à l'évaluation des acquis du Stagiaire, pour une période n'excédant pas la durée nécessaire à l'appréciation de la formation. Enfin, Kamilia Favre s'engage à effacer à l'issue des exercices toute image qui y aurait été́ prise par tout moyen vidéo lors de travaux pratiques ou de simulations.</li>
+          </ul>
+
+          <h2 class="font-semibold text-lg">Litiges</h2>
+          <p>Si une contestation ou un différend ne peuvent pas être réglés à l'amiable, le Tribunal du Mans sera seul compétent pour régler le litige.</p>
+        </div>
+      </section>
+
+      <section id="mentions" class="panel mt-6 hidden">
+        <div class="space-y-6 text-slate-700 dark:text-slate-300 text-sm leading-relaxed bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow p-8">
+          <h2 class="font-semibold text-lg">Mentions légales</h2>
+          <p><strong>Éditeur du site :</strong> Kamilia Favre – Service de formation professionnelle en langue anglaise</p>
+          <p><strong>SIRET :</strong> 517 696 191 00033</p>
+          <p><strong>Déclaration d’activité :</strong> n° 52 72 02354 72 – DREETS Pays-de-la-Loire</p>
+          <p><strong>Contact :</strong> <a href="mailto:kamilia.df@hotmail.com" class="underline">kamilia.df@hotmail.com</a> – <a href="tel:+33689968604" class="underline">06 89 96 86 04</a></p>
+          <p><strong>Responsable de la publication :</strong> Kamilia Favre</p>
+          <p><strong>Hébergement :</strong> <span class="italic">à compléter (ex. Netlify / OVH / o2switch)</span></p>
+          <p><strong>Adresse postale :</strong> <span class="italic">Logis de Moullins - 72600 Saint-Rémy-du-Val</span></p>
+          <p class="text-xs text-slate-500"></p>
+        </div>
+      </section>
+
+      <section id="politique" class="panel mt-6 hidden">
+        <div class="space-y-6 text-slate-700 dark:text-slate-300 text-sm leading-relaxed bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow p-8">
+          <h2 class="font-semibold text-lg">Politique de confidentialité</h2>
+          <p>Nous collectons les données strictement nécessaires pour répondre à vos demandes de formation et assurer le suivi administratif.</p>
+          <h3 class="font-semibold">Données traitées</h3>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Informations de contact (nom, email, téléphone)</li>
+            <li>Informations de projet de formation (objet, message)</li>
+            <li>Données d’usage basiques (logs serveur, sécurité)</li>
+          </ul>
+          <h3 class="font-semibold">Finalités</h3>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Répondre aux demandes (devis, RDV, information)</li>
+            <li>Gestion et suivi des dossiers de formation (CPF, attestations)</li>
+            <li>Sécurité et bon fonctionnement du site</li>
+          </ul>
+          <h3 class="font-semibold">Base légale</h3>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Exécution de mesures précontractuelles et du contrat de formation</li>
+            <li>Obligations légales liées à la formation professionnelle</li>
+            <li>Intérêt légitime (sécurité, amélioration continue)</li>
+          </ul>
+          <h3 class="font-semibold">Destinataires</h3>
+          <p>La formatrice et, le cas échéant, les organismes financeurs (ex. OPCO), et prestataires techniques (hébergeur, outil de formulaire).</p>
+          <h3 class="font-semibold">Durées de conservation</h3>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Demandes de contact : 24 mois</li>
+            <li>Dossiers de formation : durée légale applicable</li>
+            <li>Logs techniques : 12 mois max</li>
+          </ul>
+          <h3 class="font-semibold">Vos droits</h3>
+          <p>Accès, rectification, effacement, opposition, limitation, portabilité. Exercez-les par email : <a href="mailto:contact@your-english-teacher.fr" class="underline">contact@your-english-teacher.fr</a>.</p>
+          <h3 class="font-semibold">Cookies</h3>
+          <p>Nous n’utilisons pas de cookies publicitaires. Des cookies techniques peuvent être déposés pour la sécurité et les performances. Si vous ajoutez des outils tiers (analytics, etc.), pensez à mettre à jour cette section.</p>
+        </div>
+      </section>
+
+      <!-- Certificats QUALIOPI (no viewer toolbar) -->
+      <section id="certificats" class="panel mt-6 hidden">
+        <div class="space-y-6 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow p-8">
+            <h2 class="font-semibold text-lg mb-2">Certificats QUALIOPI</h2>
+            <p class="text-slate-600 dark:text-slate-300">Aperçu de nos certificats QUALIOPI. Cliquez sur le lien sous chaque aperçu pour l’ouvrir en plein écran si nécessaire.</p>
+
+            <div class="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <!-- Certificat 2021 -->
+              <figure class="rounded-xl border border-slate-200 dark:border-slate-700 p-4 bg-white dark:bg-slate-900 shadow-sm">
+                <figcaption class="text-center font-medium mb-3">Obtenu le 04/9/2021</figcaption>
+                <iframe src="assets/QUALIOPI2021.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                        class="w-full h-64 rounded-lg border border-slate-200 dark:border-slate-700"></iframe>
+                <p class="mt-2 text-center text-xs text-brand-600">
+                  <a href="assets/QUALIOPI2021.pdf" target="_blank" rel="noopener" class="hover:underline">Ouvrir le certificat 2021 (PDF)</a>
+                </p>
+              </figure>
+
+              <!-- Certificat 2023 -->
+              <figure class="rounded-xl border border-slate-200 dark:border-slate-700 p-4 bg-white dark:bg-slate-900 shadow-sm">
+                <figcaption class="text-center font-medium mb-3">Obtenu le 20/4/2023</figcaption>
+                <iframe src="assets/QUALIOPI2023.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                        class="w-full h-64 rounded-lg border border-slate-200 dark:border-slate-700"></iframe>
+                <p class="mt-2 text-center text-xs text-brand-600">
+                  <a href="assets/QUALIOPI2023.pdf" target="_blank" rel="noopener" class="hover:underline">Ouvrir le certificat 2023 (PDF)</a>
+                </p>
+              </figure>
+
+              <!-- Certificat 2024 -->
+              <figure class="rounded-xl border border-slate-200 dark:border-slate-700 p-4 bg-white dark:bg-slate-900 shadow-sm">
+                <figcaption class="text-center font-medium mb-3">Obtenu le 20/9/2024</figcaption>
+                <iframe src="assets/QUALIOPI2024.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                        class="w-full h-64 rounded-lg border border-slate-200 dark:border-slate-700"></iframe>
+                <p class="mt-2 text-center text-xs text-brand-600">
+                  <a href="assets/QUALIOPI2024.pdf" target="_blank" rel="noopener" class="hover:underline">Ouvrir le certificat 2024 (PDF)</a>
+                </p>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Certificats -->
+    </div>
+  </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-700 mt-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-center text-xs text-slate-500 space-y-3">
+      <p class="font-semibold">Kamilia Favre</p>
+      <p>Service de formation professionnelle en langue anglaise</p>
+      <p>Déclaration d'activité enregistrée sous le numéro 52 72 02354 72 auprès du préfet de la région des Pays-de-la-Loire (DREETS) – Numéro SIRET : 51769619100033</p>
+      <p class="pt-2">© <script>document.write(new Date().getFullYear())</script> Your English Teacher. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Tabs logic with ripple + panel animation
+    const tabButtons = Array.from(document.querySelectorAll('.tabs-bar .tab-btn'));
+    const panels = Array.from(document.querySelectorAll('.panel'));
+
+    function setActive(btn) {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function showPanel(id, btn) {
+      const next = document.getElementById(id);
+      const current = document.querySelector('.panel.is-active');
+
+      if (current && current !== next) {
+        current.classList.remove('is-active');
+        setTimeout(() => current.classList.add('hidden'), 250);
+      }
+
+      next.classList.remove('hidden');
+      requestAnimationFrame(() => next.classList.add('is-active'));
+
+      if (btn) setActive(btn);
+      history.replaceState(null, '', '#' + id);
+    }
+
+    // Click handlers + ripple
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left, y = e.clientY - rect.top;
+        const r = document.createElement('span');
+        r.className = 'ripple';
+        r.style.setProperty('--x', x + 'px');
+        r.style.setProperty('--y', y + 'px');
+        btn.appendChild(r);
+        setTimeout(() => r.remove(), 650);
+
+        showPanel(btn.dataset.panel, btn);
+      });
+    });
+
+    // Initial state (hash or default)
+    const initial = location.hash?.slice(1) || 'cgv';
+    const initialBtn = tabButtons.find(b => b.dataset.panel === initial) || tabButtons[0];
+    setActive(initialBtn);
+    showPanel(initialBtn.dataset.panel, initialBtn);
+  </script>
+</body>
+</html>
